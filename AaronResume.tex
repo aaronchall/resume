@@ -1,238 +1,218 @@
-\documentclass[letterpaper,10pt]{article}
 \input{constants}
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[
+  margin=.5in,
+  includehead,
+  headsep=0mm,
+  headheight=30pt,
+]{geometry}
+
+\usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{fontenc}
-%\usepackage{graphicx}
-\usepackage[margin=.5in,includehead]{geometry}
-\usepackage{fancyhdr,lastpage}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+
+\hypersetup{
+  colorlinks,
+  breaklinks,
+  linkcolor=darkblue,
+  urlcolor=darkblue,
+  anchorcolor=darkblue,
+  citecolor=darkblue,
+}
+
 \pagestyle{fancy}
-\lhead{\mystreetaddress\\\mycitystatezip\\}
-\chead{\Huge \textbf{Aaron Hall, MBA}}
-\rhead{\myemail\\\myphonenumber\\}
-\fancyfoot{}
-%\headsep = 5mm
-\headsep = 8mm
-\usepackage{parskip} %should remove indenting
-\usepackage[dvips]{hyperref}
-\date{08/22/11}
-%\newenvironment{blockindentone}{\quote\YOURCOMMANDSHERE}{\endquote}
+\fancyhf{}
+\fancyhead[L]{\mystreetaddress\\\mycitystatezip}
+\fancyhead[C]{\Huge \textbf{Aaron Hall, MBA}}
+\fancyhead[R]{\myemail\\\myphonenumber}
 \renewcommand{\headrulewidth}{0pt}
 
-\usepackage{color,hyperref}
-\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
-\hypersetup{colorlinks,breaklinks,
-            linkcolor=darkblue,urlcolor=darkblue,
-            anchorcolor=darkblue,citecolor=darkblue}
+% sections
+\titleformat{\section}
+  {\normalfont\normalsize\scshape}
+  {}% no number
+  {0pt}% no space
+  {}% title
+  [\titlerule]
+\titleformat{\subsection}
+  {\normalfont\normalsize}
+  {}
+  {0pt}
+  {}
+\titlespacing{\section}{0pt}{*2}{*1}
+\titlespacing{\subsection}{0pt}{*1}{0pt}
 
-\newcommand{\sbullet}{\,\begin{picture}(1,1)(0,-3)\circle*{3}\end{picture}\ }
+\setlist[itemize,1]{nosep,leftmargin=*}
 
+
+\newcommand{\sbullet}{%
+  \texorpdfstring{\textsbullet}{\textbullet}%
+}
+\DeclareRobustCommand{\textsbullet}{%
+  \unskip~\,\begin{picture}(1,1)(0,-3)\circle*{3}\end{picture}\ %
+}
+
+\newcommand{\cvsection}[1]{\section{#1}}
+\newcommand{\cvsubsection}[3]{%
+  \subsection{\textbf{#1} #2\texorpdfstring{\hfill}{ }#3}%
+}
+
+\AtBeginDocument{\setlength{\parindent}{0pt}}
+
+\date{08/22/11}
 
 \begin{document}
-\textsc{Relevant Domain Knowledge \& Experience}
-\vspace{.5mm}
-  \hline
-{\addtolength{\leftskip}{0mm} \textbf{Conference \& Meetup Talks}
 
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
+\section{Relevant Domain Knowledge \& Experience}
+
+\cvsubsection{Conference \& Meetup Talks}{}{}
+
+\begin{itemize}
   \item Learning Python with Best Practices \sbullet Python Best Practices \sbullet Functional Programming with Python
   \item Python by Aaron Hall - a nuts and bolts overview of Python to programmers of other languages
   \item Conference talks - Linear Models with Python \sbullet The Python Datamodel: When and how to write objects 
         \sbullet Best Practices for Writing Reusable Python
-  \item Consulted on Python Data Science Curriculum and instructed Python classes at CUNY and Columbia
+  \item Consulted on Python Data Science Curriculum 
   \item Organized and Tutored Python Office Hours Sundays for a solid year from 2014 to 2015 - still organize.
-
-}
 \end{itemize}
 
-}}
+\cvsubsection{Programming Languages}{}{}
 
-\vspace{-1mm}
-{\addtolength{\leftskip}{0mm} \textbf{Programming Languages}
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
+\begin{itemize}
   \item Primary experience: Python, JSON, OODB, YAML, BASH, HTML, RST, Orgmode, \& other Markdowns
   \item Some experience with R, SAS, SPSS, Stata, and modified Prolog
   \item Toyed with: C, Ruby, Rails, Haskell, Lisp, Fortran, COBOL, Javascript, \& \LaTeX  
-
-}
 \end{itemize}
 
-}}
+\cvsubsection{Investment, Financial Products, and Accounting Knowledge}{}{}
 
-\vspace{-1mm}
-{\addtolength{\leftskip}{0mm} \textbf{Investment, Financial Products, and Accounting Knowledge}
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
-  \item Securities Licensed on Packaged Products, Stocks & Bonds, Options, and Investment Advisor Regulations
+\begin{itemize}
+  \item Securities Licensed on Packaged Products, Stocks \& Bonds, Options, and Investment Advisor Regulations
   \item Passed State of Florida Insurance and Real Estate Licensure Courses and Tests
   \item Answered over 150 Accounting and Tax Questions on Investments Pro-bono for All-Experts.com
-
-}
 \end{itemize}
 
-}}
+\cvsection{Professional Experience}
+\cvsubsection{Bank of America}
+  {\emph{Software Engineer \& Architect} \sbullet New York City, NY}
+  {April 2014 - February 2020}
 
-\vspace{-1mm}
-\textsc{Professional Experience}
-\vspace{.5mm}
-  \hline
-{\addtolength{\leftskip}{0mm} \textbf{\anonemployer} \emph{Software Engineer \& Architect} % had as PLT \sbullet NWFSC \sbullet PCC \sbullet PSC
-\sbullet New York City, NY \hfill{} October 2012 - Present
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
-  \item Developed Portal for Delivering Documentation, Information, Statistics, and Reports
-  \item Led Team to use Core Technology, Idiomatic Python, Maintainable Style, Proper Unittesting, and Proper SDLC
+\begin{itemize}
+  \item Wrote and Delivered Training on Statistics and Machine Learning
   \item Wrote Documentation and Training on Access Control, Proprietary OODB, Python, IDE, Sphinx, and Batch Jobs
-  \item Developed Tool to Document Filesets, Provide Actionable Statistics, Push to Environments, and Raise Review Requests
   \item Reviewed Projects for Best Practices \& Edited Scripts for Performance, Maintainability, and Readability
   \item Instructed Developers in Best Practices with Weekly Webinars and Regular Code Review
   \item Developed GUI for 2nd generation Release Management Tool with Pretty Urls
   \item Developed Extension to Python Logging API
   \item Developed Library to Export Data from native Python to Tableau
-
-}
 \end{itemize}
 
-}}
+\cvsubsection{Adjunct Professor}{New York City, NY}{Various dates}
+\begin{itemize}
+  \item Columbia Masters in Operations Research, Python
+  \item NYU, Python Certificate Program
+  \item Yeshiva, Computational Math and Statistics with Python
+\end{itemize}
 
-\vspace{-1mm} % need after each section
-{\addtolength{\leftskip}{0mm} \textbf{Simplify IT} \emph{Computer Technician} 
-\sbullet New York, NY \hfill{} March, 2012 - May, 2012
+\cvsubsection{Rose International}
+  {\emph{Software Engineer and Source Manager, Contractor} 
+   \sbullet New York City, NY}
+  {October 2012 - April 2014}
 
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
+\begin{itemize}
+  \item Developed Tool to Document Filesets, Provide Actionable Statistics, Push to Environments, and Raise Review Requests
+  \item Developed Portal for Delivering Documentation, Information, Statistics, and Reports
+  \item Led Team to use Core Technology, Idiomatic Python, Maintainable Style, Proper Unittesting, and Proper SDLC
+\end{itemize}
+
+\cvsubsection{Simplify IT}
+ {\emph{Computer Technician} \sbullet New York, NY}
+ {March, 2012 - May, 2012}
+
+\begin{itemize}
   \item Troubleshot Computers and Networks, Audited and Installed Software
   \item Uploaded and Managed Inventory in an Amazon Web Store, Working With CSV and Flat Files
-
-}
 \end{itemize}
 
-}}
+\cvsubsection{Thornhill Community Supportive Services Inc.}
+ {\emph{Assistant Director} \sbullet New York, NY}
+ {August, 2011 - February, 2012}
 
-\vspace{-1mm}
-{\addtolength{\leftskip}{0mm} \textbf{Thornhill Community Supportive Services Inc.} \emph{Assistant Director} 
-\sbullet New York, NY \hfill{} August, 2011 - February, 2012
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
+\begin{itemize}
   \item Operation Planning, Risk Management, and Network, Computer, Accounting, and Electronic Document Administration
   \item Led Team of 17 in Providing Computer Literacy and Coat, Toy, Book, and Media Community Distribution Programs
-
-}
 \end{itemize}
 
-}}
+\cvsubsection{Pvt. Invest. Advisor/Sol Strategies}
+  {\emph{Investment/Strategic Planning} \sbullet New York, NY}
+  {April, 2007 - October, 2012}
 
-\vspace{-1mm}
-{\addtolength{\leftskip}{0mm} \textbf{Pvt. Invest. Advisor/Sol Strategies} \emph{Investment/Strategic Planning} 
-\sbullet New York, NY \hfill{} April, 2007 - October, 2012
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
+\begin{itemize}
   \item Advised Sol Strategies on Firm Strategy, Business Development, Cash-Flow Management, and Billing Policy
   \item Consulted on Strategy and Wrote Financial, Investment, and Business Plans and Grant Applications
-
-}
 \end{itemize}
 
-}}
+\cvsubsection{Florida State University}
+  {\emph{Research Assistant} \sbullet Tallahassee, FL}
+  {August, 2007 - April, 2008}
 
-\vspace{-1mm}
-{\addtolength{\leftskip}{0mm} \textbf{Florida State University} \emph{Research Assistant} 
-\sbullet Tallahassee, FL \hfill{} August, 2007 - April, 2008
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
+\begin{itemize}
   \item Teaching Fellow, Graded for Mergers and Acquisitions, Assisted in Data Collection, Research, and Proctoring Exams
   \item Programmed in SAS, Stata, SPSS, and R and Performed Regressions on Econometric Data
-
-}
 \end{itemize}
 
-}}
+\cvsubsection{Merrill Lynch}
+  {\emph{Financial Advisor} \sbullet Pensacola, FL}
+  {May, 2006 - April, 2007}
 
-\vspace{-1mm}
-{\addtolength{\leftskip}{0mm} \textbf{Merrill Lynch} \emph{Financial Advisor} 
-\sbullet Pensacola, FL \hfill{} May, 2006 - April, 2007
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
+\begin{itemize}
   \item Hosted Speakers, Brought in \$3 Million in Accounts, and Serviced More Than 100 House Accounts
   \item Executed Trades and Limit Orders on Exchange Traded Funds, Stocks, Options, and Auction Rate Securities
-
-}
 \end{itemize}
 
-}}
+\cvsubsection{Ameriprise Financial Services}
+  {\emph{Financial Advisor} \sbullet New York, NY}
+  {January, 2004 - August, 2005}
 
-\vspace{-1mm}
-{\addtolength{\leftskip}{0mm} \textbf{Ameriprise Financial Services} \emph{Financial Advisor} 
-\sbullet New York, NY \hfill{} January, 2004 - August, 2005
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
+\begin{itemize}
   \item Gave Seminars, Sold Financial Plans, Met Sales Goals, and Applied Monte Carlo Simulation \& Modern Portfolio Theory
   \item Series 7 Securities, Series 66 Investment Advisor, Life Insurance, Health Insurance, and Variable Annuity Licensed
-
-}
 \end{itemize}
 
-}}
+\cvsection{Education}
+\cvsubsection{University Of West Florida}
+  {\emph{Master of Business Administration} \sbullet College of Business \sbullet Pensacola, FL}
+  {August 2010}
 
-\vspace{-1mm}
-\textsc{Education}
-\vspace{.5mm}
-\hline
-{\addtolength{\leftskip}{0mm}
-\textbf{University Of West Florida}, College of Business \sbullet Pensacola, FL \hfill August 2010
-
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\emph{Master of Business Administration}
-
-    \vspace{-2mm} %{\addtolength{\leftskip}{5mm}
-
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
-    \item 730 GMAT, 3.6 GPA, 486 Item Bibliographic Database, and International Business Strategy Championship winner
-    \item Notable Papers: Predictors of Stock Market Values (Time Series) and Marketing Financial Services (Best in Class)
-    \item Statistics Courses: Econometrics \sbullet Applied Regression \sbullet Probability and Statistics \sbullet Special Topics \sbullet Quantitative Methods
-    \item Finance: Financial Management \sbullet Accounting Aspects \sbullet Advanced Managerial Economics \sbullet Static Optimization
-
-}
+\begin{itemize}
+  \item 730 GMAT, 3.6 GPA, 486 Item Bibliographic Database, and International Business Strategy Championship winner
+  \item Notable Papers: Predictors of Stock Market Values (Time Series) and Marketing Financial Services (Best in Class)
+  \item Statistics Courses: Econometrics \sbullet Applied Regression \sbullet Probability and Statistics \sbullet Special Topics \sbullet Quantitative Methods
+  \item Finance: Financial Management \sbullet Accounting Aspects \sbullet Advanced Managerial Economics \sbullet Static Optimization
 \end{itemize}
 
-}}
-\vspace{-1mm}{\addtolength{\leftskip}{0mm}
-\textbf{Florida State University} \sbullet Tallahassee, FL \hfill April 2002
+\cvsubsection{Florida State University}
+  {\emph{Bachelor of Science, Political Science \& Real Estate} \sbullet Tallahassee, FL}
+  {April 2002}
 
-\vspace{-2mm} {\addtolength{\leftskip}{0mm}
-\emph{Bachelor of Science, Political Science \& Real Estate}
-
-    \vspace{-2mm} %{\addtolength{\leftskip}{5mm}
-\begin{itemize}\setlength{\itemsep}{0cm}\setlength{\parskip}{0cm} {\addtolength{\leftskip}{-5mm}
-    \item National Merit Scholar, Dean’s List, and Graduated with 169 credit hours, 3.4 GPA, Served on Boards, Volunteered
-    \item Real Estate Courses: Real Estate \sbullet Real Estate Finance \sbullet Appraisal I & II \sbullet Feasibility \sbullet Legal Environment 
-    \item Relevant: Game Theory \sbullet Financial Accounting \sbullet Managerial Accounting \sbullet Corporate Finance \sbullet Calculus \sbullet International Relations \sbullet Macroeconomics \sbullet Microeconomics \sbullet Comparative Government \sbullet Quantitative Methods \sbullet Research Methods
-
-}
+\begin{itemize}
+  \item National Merit Scholar, Dean’s List, and Graduated with 169 credit hours, 3.4 GPA, Served on Boards, Volunteered
+  \item Real Estate Courses: Real Estate \sbullet Real Estate Finance \sbullet Appraisal I \& II \sbullet Feasibility \sbullet Legal Environment 
+  \item Relevant: Game Theory \sbullet Financial Accounting \sbullet Managerial Accounting \sbullet Corporate Finance \sbullet Calculus \sbullet International Relations \sbullet Macroeconomics \sbullet Microeconomics \sbullet Comparative Government \sbullet Quantitative Methods \sbullet Research Methods
 \end{itemize}
 
-}}
+\cvsection{Interests, \& Miscellany}
 
-
-\vspace{-1mm}
-\textsc{Interests, \& Miscellany}
-\vspace{.5mm}
-\hline
-
-Big Data, Databases (Hadoop, MongoDB, etc), Attended Strata 2011, Statistics, Finance, Economics, Machine Learning\\
+Big Data, Databases, Statistics, Finance, Economics, Machine Learning\\
 Extensive Bibliographies: User Experience, Software Design, Finance Classics, Knowledge, and Management
-
-
 
 \end{document}
