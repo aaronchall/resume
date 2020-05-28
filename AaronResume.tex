@@ -1,12 +1,7 @@
 \input{constants}
 \documentclass[letterpaper,10pt]{article}
 
-\usepackage[
-  margin=.5in,
-  includehead,
-  headsep=0mm,
-  headheight=30pt,
-]{geometry}
+\usepackage[margin=.5in, includehead, headsep=0mm, headheight=30pt]{geometry}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -20,14 +15,8 @@
 
 \definecolor{darkblue}{rgb}{0.0,0.0,0.3}
 
-\hypersetup{
-  colorlinks,
-  breaklinks,
-  linkcolor=darkblue,
-  urlcolor=darkblue,
-  anchorcolor=darkblue,
-  citecolor=darkblue,
-}
+\hypersetup{colorlinks, breaklinks, linkcolor=darkblue, urlcolor=darkblue, anchorcolor=darkblue,
+            citecolor=darkblue}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -51,8 +40,7 @@
 \titlespacing{\section}{0pt}{*2}{*1}
 \titlespacing{\subsection}{0pt}{*1}{0pt}
 
-\setlist[itemize,1]{nosep,leftmargin=*}
-
+\setlist[itemize, 1]{nosep, leftmargin=*}
 
 \newcommand{\sbullet}{%
   \texorpdfstring{\textsbullet}{\textbullet}%
@@ -68,85 +56,84 @@
 
 \AtBeginDocument{\setlength{\parindent}{0pt}}
 
-\date{08/22/11}
+\date{05/27/2020}
 
 \begin{document}
 
-\section{Relevant Domain Knowledge \& Experience}
+\cvsection{Relevant Domain Knowledge \& Experience}
 
-\cvsubsection{Conference \& Meetup Talks}{}{}
-
+\cvsubsection{Talks and Community Involvement}{}{}
 \begin{itemize}
-  \item Learning Python with Best Practices \sbullet Python Best Practices \sbullet Functional Programming with Python
-  \item Python by Aaron Hall - a nuts and bolts overview of Python to programmers of other languages
-  \item Conference talks - Linear Models with Python \sbullet The Python Datamodel: When and how to write objects 
-        \sbullet Best Practices for Writing Reusable Python
-  \item Consulted on Python Data Science Curriculum 
-  \item Organized and Tutored Python Office Hours Sundays for a solid year from 2014 to 2015 - still organize.
+  \item Conference talks: \emph{Slot or Not} at PyCon 2017 \sbullet \emph{Linear Models with Python} \sbullet 
+        \emph{The Python Datamodel: When and how to write objects} \sbullet \emph{Best Practices for Writing Reusable Python}
+  \item Stack Overflow Moderator and top Answerer, top 200 users by Reputation Points All Time, over 120 million reached
+  \item FOSS contributions: CPython code and documentation, Jupyter documentation, NixOps types
+  \item Contributed to Documentation on Installing NixOS on Linode's server as a service platform
+  \item Organized and Tutored Python Office Hours Sundays for a solid year from 2014 to 2015 - still an event organizer
+  \item Meetup Talks and Lectures: \emph{Learning Python with Best Practices} \sbullet \emph{Python Best Practices} 
+        \sbullet \emph{Functional Programming with Python} \sbullet N-Languages meetup: \emph{Python}
 \end{itemize}
 
-\cvsubsection{Programming Languages}{}{}
-
+\cvsubsection{Programming Languages, Libraries, and Environments}{}{}
 \begin{itemize}
-  \item Primary experience: Python, JSON, OODB, YAML, BASH, HTML, RST, Orgmode, \& other Markdowns
-  \item Some experience with R, SAS, SPSS, Stata, and modified Prolog
-  \item Toyed with: C, Ruby, Rails, Haskell, Lisp, Fortran, COBOL, Javascript, \& \LaTeX  
+  \item Python, R, Nix, NixOS, Ubuntu, RHEL, Haskell, OODBs, BASH, HTML, RST, Emacs, Orgmode, \& Rmarkdown
+  \item Python libs: MyPy, Matplotlib, Numpy, Scipy, Statsmodels, Scikit-learn, Pandas, Flask, Requests, Jupyter, etc...
+  \item Also: Vim, Waf, Scala, Clojure, SAS, SPSS, Stata, Prolog, C, Ruby,
+    Lisps, Fortran, COBOL, SQL, JS, \& \LaTeX  
 \end{itemize}
 
-\cvsubsection{Investment, Financial Products, and Accounting Knowledge}{}{}
-
+\cvsubsection{Finance/Business Background}{}{}
 \begin{itemize}
-  \item Securities Licensed on Packaged Products, Stocks \& Bonds, Options, and Investment Advisor Regulations
-  \item Passed State of Florida Insurance and Real Estate Licensure Courses and Tests
-  \item Answered over 150 Accounting and Tax Questions on Investments Pro-bono for All-Experts.com
+  \item Organizer of NYCFinance meetup, host for CFA Study Groups
+  \item Have passed CFA Level I, Series 7 \& 66, Florida Insurance and Real Estate Licensure Courses and Tests
+  \item Answered over 150 Accounting and Tax Questions on Investments Pro-bono for All-Experts.com, highly rated
 \end{itemize}
 
 \cvsection{Professional Experience}
 \cvsubsection{Bank of America}
   {\emph{Software Engineer \& Architect} \sbullet New York City, NY}
   {April 2014 - February 2020}
-
 \begin{itemize}
-  \item Wrote and Delivered Training on Statistics and Machine Learning
+  \item Wrote and Delivered Training to Hundreds of Engineers on Python 2-3 migration, Statistics and Machine Learning
+  \item Lead Developer Integrated Jupyter Notebook/Lab with OODB backend for saving notebooks
+  \item Technical Subject Matter Expert on various applications for the purpose of auditing
   \item Wrote Documentation and Training on Access Control, Proprietary OODB, Python, IDE, Sphinx, and Batch Jobs
   \item Reviewed Projects for Best Practices \& Edited Scripts for Performance, Maintainability, and Readability
   \item Instructed Developers in Best Practices with Weekly Webinars and Regular Code Review
-  \item Developed GUI for 2nd generation Release Management Tool with Pretty Urls
+  \item Developed GUI for Continuous Integration and Release Management Tool with Pretty Urls
   \item Developed Extension to Python Logging API
   \item Developed Library to Export Data from native Python to Tableau
 \end{itemize}
 
-\cvsubsection{Adjunct Professor}{New York City, NY}{Various dates}
+\cvsubsection{}
+  {\emph{Adjunct Professor} \sbullet New York City, NY}
+  {April 2016 - April 2019, Various dates}
 \begin{itemize}
-  \item Columbia Masters in Operations Research, Python
+  \item Columbia Masters in Operations Research Program, Python course
   \item NYU, Python Certificate Program
   \item Yeshiva, Computational Math and Statistics with Python
 \end{itemize}
 
 \cvsubsection{Rose International}
-  {\emph{Software Engineer and Source Manager, Contractor} 
-   \sbullet New York City, NY}
+  {\emph{Software Engineer, Contractor} \sbullet New York City, NY}
   {October 2012 - April 2014}
-
-\begin{itemize}
-  \item Developed Tool to Document Filesets, Provide Actionable Statistics, Push to Environments, and Raise Review Requests
-  \item Developed Portal for Delivering Documentation, Information, Statistics, and Reports
+\begin{itemize} 
+  \item At BofA, Developed Tool to Document Filesets, Provide Statistics, Push to Environments, and Raise Review Requests
+  \item Lead Developer on Portal for Delivering Documentation, Information, Statistics, and Reports
   \item Led Team to use Core Technology, Idiomatic Python, Maintainable Style, Proper Unittesting, and Proper SDLC
 \end{itemize}
 
 \cvsubsection{Simplify IT}
- {\emph{Computer Technician} \sbullet New York, NY}
+ {\emph{Technician} \sbullet New York, NY}
  {March, 2012 - May, 2012}
-
 \begin{itemize}
-  \item Troubleshot Computers and Networks, Audited and Installed Software
+  \item Troubleshot Computers and Networks, Punched Ethernet Panels and Jacks, and Audited and Installed Software
   \item Uploaded and Managed Inventory in an Amazon Web Store, Working With CSV and Flat Files
 \end{itemize}
 
 \cvsubsection{Thornhill Community Supportive Services Inc.}
  {\emph{Assistant Director} \sbullet New York, NY}
  {August, 2011 - February, 2012}
-
 \begin{itemize}
   \item Operation Planning, Risk Management, and Network, Computer, Accounting, and Electronic Document Administration
   \item Led Team of 17 in Providing Computer Literacy and Coat, Toy, Book, and Media Community Distribution Programs
@@ -155,7 +142,6 @@
 \cvsubsection{Pvt. Invest. Advisor/Sol Strategies}
   {\emph{Investment/Strategic Planning} \sbullet New York, NY}
   {April, 2007 - October, 2012}
-
 \begin{itemize}
   \item Advised Sol Strategies on Firm Strategy, Business Development, Cash-Flow Management, and Billing Policy
   \item Consulted on Strategy and Wrote Financial, Investment, and Business Plans and Grant Applications
@@ -164,7 +150,6 @@
 \cvsubsection{Florida State University}
   {\emph{Research Assistant} \sbullet Tallahassee, FL}
   {August, 2007 - April, 2008}
-
 \begin{itemize}
   \item Teaching Fellow, Graded for Mergers and Acquisitions, Assisted in Data Collection, Research, and Proctoring Exams
   \item Programmed in SAS, Stata, SPSS, and R and Performed Regressions on Econometric Data
@@ -173,7 +158,6 @@
 \cvsubsection{Merrill Lynch}
   {\emph{Financial Advisor} \sbullet Pensacola, FL}
   {May, 2006 - April, 2007}
-
 \begin{itemize}
   \item Hosted Speakers, Brought in \$3 Million in Accounts, and Serviced More Than 100 House Accounts
   \item Executed Trades and Limit Orders on Exchange Traded Funds, Stocks, Options, and Auction Rate Securities
@@ -182,7 +166,6 @@
 \cvsubsection{Ameriprise Financial Services}
   {\emph{Financial Advisor} \sbullet New York, NY}
   {January, 2004 - August, 2005}
-
 \begin{itemize}
   \item Gave Seminars, Sold Financial Plans, Met Sales Goals, and Applied Monte Carlo Simulation \& Modern Portfolio Theory
   \item Series 7 Securities, Series 66 Investment Advisor, Life Insurance, Health Insurance, and Variable Annuity Licensed
@@ -192,7 +175,6 @@
 \cvsubsection{University Of West Florida}
   {\emph{Master of Business Administration} \sbullet College of Business \sbullet Pensacola, FL}
   {August 2010}
-
 \begin{itemize}
   \item 730 GMAT, 3.6 GPA, 486 Item Bibliographic Database, and International Business Strategy Championship winner
   \item Notable Papers: Predictors of Stock Market Values (Time Series) and Marketing Financial Services (Best in Class)
@@ -203,16 +185,12 @@
 \cvsubsection{Florida State University}
   {\emph{Bachelor of Science, Political Science \& Real Estate} \sbullet Tallahassee, FL}
   {April 2002}
-
 \begin{itemize}
-  \item National Merit Scholar, Dean’s List, and Graduated with 169 credit hours, 3.4 GPA, Served on Boards, Volunteered
-  \item Real Estate Courses: Real Estate \sbullet Real Estate Finance \sbullet Appraisal I \& II \sbullet Feasibility \sbullet Legal Environment 
-  \item Relevant: Game Theory \sbullet Financial Accounting \sbullet Managerial Accounting \sbullet Corporate Finance \sbullet Calculus \sbullet International Relations \sbullet Macroeconomics \sbullet Microeconomics \sbullet Comparative Government \sbullet Quantitative Methods \sbullet Research Methods
+  \item National Merit Scholar, Dean's List, and Graduated with 169 credit
+    hours, 3.4 GPA, Boards, Clubs, SGA
 \end{itemize}
 
 \cvsection{Interests, \& Miscellany}
-
-Big Data, Databases, Statistics, Finance, Economics, Machine Learning\\
+Big Data, Databases, Statistics, Finance, Economics, Machine Learning, Operating Systems\\
 Extensive Bibliographies: User Experience, Software Design, Finance Classics, Knowledge, and Management
-
 \end{document}
