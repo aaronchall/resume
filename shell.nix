@@ -2,8 +2,10 @@
 with pkgs;
   mkShell {
     buildInputs = [
+      python39
       texlive.combined.scheme-full
       vim
+      which
       entr
       ncurses # for tput
       tree
