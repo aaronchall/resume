@@ -1,5 +1,9 @@
 # How to build
 
+You need nix installed on your system. 
+If you're using nix on Apple (darwin) you'll need to update the flake.nix.
+After that:
+
 For a reproducible build:
 
 ```bash
